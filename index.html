@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="og:title"               content="WELCOME TO THE FART ZONE"/>
+        <meta name="og:site_name"           content="VOTV Image Resizer"/>
+        <meta name="og:image"               content="https://universe.dog/votv-image-resizer/site-preview.png"/>
+
+        <meta name="twitter:card"                       content="summary"/>
+        <meta name="twitter:creator"                    content="simone universe"/>
+        <meta name="twitter:description"                content="tool to allow you to quickly drag an image in to change it's aspect ratio"/>
+
+        <meta name="twitter:image"                      content="https://universe.dog/votv-image-resizer/site-preview.png"/>
+        <meta name="twitter:image:src"                  content="https://universe.dog/votv-image-resizer/site-preview.png"/>
+
+
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <title>Voices of the Void Killed My Grandma, Okay?!?</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+            
+            * {background-color: black; color: white; box-sizing: border-box; padding: 5px; margin: 1px;font-family: "Share Tech Mono", monospace;}
+            #aspect {
+                margin-left:9vw;
+            }
+
+            h1 {
+                margin-top: 1vh;
+                margin-left:9vw;
+            }
+
+            #sub {
+                font-size: 9pt;
+                background-color: transparent;
+                color:#808080;
+            }
+            
+            #images {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              grid-template-rows: 1fr;
+              grid-column-gap: 1rem;
+            }
+
+            #imgContainer1 {
+              padding: 1rem;
+              background-color: indigo; 
+              border: 2px solid indigo; 
+              border-radius: 10px;
+            }
+
+            #imgToResize {
+              background-color: indigo; 
+              width: 100%;
+            }
+
+            #imgContainer2 {
+              padding: 1rem;
+              background-color: indigo; 
+              border: 2px solid indigo; 
+              border-radius: 10px;
+            }
+
+            #resizedImage {
+              background: repeating-conic-gradient(#808080 0 25%, #FFFFFF 0 50%) 50% / 20px 20px; 
+              width: 100%;
+            }
+
+            #dropzone {
+                position: absolute;
+                background: blue;
+                z-index: 10;
+                margin-left: 5%;
+                margin-top: 5%;
+                width: 90%;
+                height: 70%;
+                border: 5px dashed skyblue; 
+                border-radius: 45px;
+            }
+
+            #uploadmodal {
+              margin-top: 27vh;
+              text-align: center;
+              background-color: blue;
+            }
+        </style>
+    </head>
+  <body>
+    <h1>VOTV image farter<div id="sub"> by simone universe </div></h1>
+    <p>
+    <select name="Aspect Ratio" id="aspect">
+        <option value="1:1">Poster / Flag / Sticker / Square Photo [1:1]</option>
+        <option value="16:9">Picture (Horizontal) [16:9]</option>
+        <option value="4:5">Picture (Vertical) [4:5]</option>
+        <option value="3:4">Picture (Table) [3:4]</option>
+    </select>
+    </p>
+    
+    <div id="dropzone"><p id="uploadmodal">drop file here. or dont im a div not a cop</br>or you can use this thing...</br></br><input id="upload" type="file" accept="image/*" /></p></div>
+    <div id="images" style="visibility: hidden;">
+        <div id="imgContainer1"><img id="imgToResize" /></div>
+        <div id="imgContainer2"><img id="resizedImage" /></div>
+    </div>
+    <script src="image_resizer.js"></script>
+  </body>
+</html>
